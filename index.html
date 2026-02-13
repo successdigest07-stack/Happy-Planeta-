@@ -3,94 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Planeta | Elevate Your Lifestyle</title>
+    <title>Happy Planeta | Wellness & Growth</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-        .gradient-text { background: linear-gradient(90deg, #000000, #4b5563); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-white text-slate-900 font-sans">
 
-    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200/50">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
-            <span class="text-xl font-800 tracking-tighter gradient-text">HAPPY PLANETA</span>
-            <div class="hidden md:flex space-x-8 text-sm font-semibold">
-                <a href="#features" class="hover:text-blue-600 transition">Explore</a>
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#legal" class="hover:text-blue-600 transition">Privacy</a>
-            </div>
-            <a href="mailto:hello@happyplaneta.com" class="bg-black text-white px-5 py-2 rounded-full text-xs font-bold hover:scale-105 transition transform">Contact</a>
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <div class="text-2xl font-black tracking-tighter text-blue-600">HAPPY PLANETA</div>
+        <div class="hidden md:flex gap-8 font-medium text-sm uppercase tracking-widest text-slate-600">
+            <a href="#about" class="hover:text-blue-600 transition">About</a>
+            <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
         </div>
     </nav>
 
-    <header class="pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold tracking-widest uppercase">Premium Insights</span>
-            <h1 class="text-5xl md:text-7xl font-800 mt-6 mb-8 tracking-tight leading-tight">Better Habits. <br><span class="gradient-text">Better Planet.</span></h1>
-            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">We curate the intersection of personal growth, modern wellness, and innovative living to help you thrive in an evolving digital landscape.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#features" class="bg-black text-white px-10 py-4 rounded-xl font-bold hover:shadow-2xl transition">Get Started</a>
-                <a href="#about" class="bg-white border border-slate-200 px-10 py-4 rounded-xl font-bold hover:bg-slate-50 transition">Learn More</a>
-            </div>
-        </div>
+    <header class="px-8 py-20 text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-black leading-none tracking-tight mb-6 text-slate-900">
+            Live better. <br><span class="text-blue-600">Grow faster.</span>
+        </h1>
+        <p class="text-xl text-slate-500 mb-10 leading-relaxed">
+            Curating the best in wellness and intentional living for the modern world.
+        </p>
+        <a href="#about" class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-600 transition shadow-xl inline-block">
+            Explore Our Story
+        </a>
     </header>
 
-    <section id="features" class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition">
-                <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
-                    <i data-lucide="zap"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Wellness</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Science-backed habits for physical and mental clarity in a fast-paced world.</p>
+    <section id="about" class="py-24 bg-slate-50 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black tracking-tight mb-4 text-slate-900">The Happy Planeta Story</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
             </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition">
-                <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mb-6 text-green-600">
-                    <i data-lucide="trending-up"></i>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+                    <p>
+                        <strong class="text-slate-900 font-bold">Happy Planeta</strong> started with a simple question: How do we maintain our well-being in a world that never stops moving?
+                    </p>
+                    <p>
+                        We realized that true growth isn't about doing more—it's about doing what matters. We bring you a filtered, science-backed guide to living better and reaching your full potential.
+                    </p>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Growth</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Leveraging innovation and digital trends to scale your personal potential.</p>
-            </div>
-            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition">
-                <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 text-purple-600">
-                    <i data-lucide="shield-check"></i>
+                
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h4 class="text-xl font-bold mb-6 text-slate-900">Our Core Beliefs</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-blue-500 text-xl"></i> 
+                            <span class="font-medium">Radical Clarity</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i> 
+                            <span class="font-medium">Holistic Growth</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-purple-500 text-xl"></i> 
+                            <span class="font-medium">Conscious Living</span>
+                        </li>
+                    </ul>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Integrity</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Conscious living strategies designed for the intentional, modern individual.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-white px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-800 mb-8">Our Mission</h2>
-            <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100">
-                <p class="text-xl text-slate-600 italic leading-relaxed">"Happy Planeta was built to filter the noise. We provide a trusted resource hub for the global community to build a balanced, successful, and fulfilling life."</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="legal" class="py-24 px-6 max-w-4xl mx-auto border-t border-slate-100">
-        <div class="grid md:grid-cols-2 gap-12">
-            <div>
-                <h4 class="font-bold mb-4 uppercase tracking-widest text-xs text-slate-400">Privacy Policy</h4>
-                <p class="text-xs text-slate-500 leading-relaxed">Happy Planeta respects your privacy. We only collect information voluntarily provided via email. We do not sell data to third parties. Your use of this site constitutes acceptance of our data protection standards.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4 uppercase tracking-widest text-xs text-slate-400">Terms of Service</h4>
-                <p class="text-xs text-slate-500 leading-relaxed">All content on Happy Planeta is for informational purposes. While we strive for accuracy, use of our insights is at your own risk. We reserve the right to modify content at any time.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 bg-slate-50 border-t border-slate-200 px-6 text-center">
-        <p class="text-xs text-slate-400 font-medium">© 2026 HAPPY PLANETA • HELLO@HAPPYPLANETA.COM</p>
+    <footer id="contact" class="py-20 border-t border-slate-100 text-center">
+        <div class="text-2xl font-black tracking-tighter text-slate-300 mb-8">HAPPY PLANETA</div>
+        <p class="text-slate-400 text-sm">© 2026 Happy Planeta. All rights reserved.</p>
     </footer>
 
-    <script>lucide.createIcons();</script>
 </body>
-  </html>
+</html>
