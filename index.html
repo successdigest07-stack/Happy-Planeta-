@@ -4,192 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Planeta | Expert Eco-Product Reviews</title>
+    
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #2d6a4f;
-            --secondary: #76ba99;
-            --text: #1b4332;
-            --bg: #f8faf9;
+            --primary: #1b4332; /* Deep Forest Green */
+            --accent: #40916c;  /* Fresh Leaf Green */
+            --bg: #f4f7f5;
             --white: #ffffff;
-            --star: #ffcc00;
+            --text-dark: #081c15;
+            --star-gold: #ffb703;
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
-        /* NAVIGATION - Professional & Sticky */
+        /* STICKY PROFESSIONAL HEADER */
         header {
             background: var(--white);
-            padding: 15px 5%;
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .brand {
+        .logo-box {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
-            color: var(--primary);
+            transition: 0.3s;
+        }
+
+        .logo-box img {
+            height: 48px; /* Fixed height for consistency */
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .logo-box span {
+            font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--primary);
         }
 
-        .brand img {
-            width: 45px;
-            height: 45px;
-            object-fit: contain;
-            background: #eef7f2; /* Makes logo visible */
-            border-radius: 10px;
-            padding: 2px;
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            margin-left: 20px;
+            font-size: 0.95rem;
         }
 
-        nav { display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.95rem; }
-        nav a:hover { color: var(--secondary); }
-
-        /* HERO - Trust & Authority */
+        /* HERO SECTION */
         .hero {
-            padding: 60px 5%;
+            background: var(--primary);
+            color: var(--white);
+            padding: 80px 5%;
             text-align: center;
-            background: var(--white);
-            border-bottom: 1px solid #eee;
         }
 
-        .hero h1 { font-size: 2.8rem; margin: 0 0 15px; letter-spacing: -1px; }
-        .hero p { max-width: 600px; margin: 0 auto 25px; color: #555; font-size: 1.1rem; }
+        .hero h1 { font-family: 'Outfit', sans-serif; font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto 30px; }
 
-        /* REVIEW GRID */
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .section-title { font-size: 1.5rem; margin-bottom: 25px; border-left: 5px solid var(--secondary); padding-left: 15px; }
-
+        /* PRODUCT REVIEW GRID */
+        .main-container { max-width: 1200px; margin: -40px auto 60px; padding: 0 20px; }
+        
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .review-card {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 1px solid #e1e8e4;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-bottom: 4px solid var(--accent);
         }
 
-        .review-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .review-card:hover { transform: translateY(-8px); }
 
-        .card-content { padding: 20px; flex-grow: 1; }
-        .category { font-size: 0.75rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; }
-        .review-card h3 { margin: 10px 0; font-size: 1.3rem; }
-        .rating { color: var(--star); font-size: 1.1rem; margin-bottom: 15px; }
+        .card-content { padding: 25px; }
+        
+        .tag {
+            background: #e8f5e9;
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
 
-        .btn-sm {
-            display: inline-block;
+        .review-card h3 { margin: 15px 0 10px; font-family: 'Outfit', sans-serif; font-size: 1.4rem; }
+        
+        .stars { color: var(--star-gold); margin-bottom: 15px; font-size: 1.1rem; }
+
+        .btn-cta {
+            display: block;
             background: var(--primary);
             color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
             text-align: center;
-            transition: 0.2s;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
         }
 
-        .btn-sm:hover { background: var(--secondary); }
+        .btn-cta:hover { background: var(--accent); }
 
-        /* FOOTER */
-        footer { background: var(--primary); color: white; padding: 50px 5% 20px; margin-top: 60px; text-align: center; }
-        .footer-links a { color: #a9dcc3; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
-
-        /* MOBILE FIXES */
+        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
-            header { flex-direction: column; gap: 15px; text-align: center; }
-            .hero h1 { font-size: 2rem; }
-            nav { flex-wrap: wrap; justify-content: center; }
+            header { flex-direction: column; padding: 20px; text-align: center; }
+            nav { margin-top: 15px; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <a href="/" class="brand">
-        <img src="favicon.png" alt="Logo">
+    <a href="/" class="logo-box">
+        <img src="favicon.png" alt="Happy Planeta Logo">
         <span>Happy Planeta</span>
     </a>
     <nav>
         <a href="#reviews">Latest Reviews</a>
         <a href="https://plans.happyplaneta.com">Our Plans</a>
-        <a href="mailto:hello@happyplaneta.com">Contact</a>
+        <a href="mailto:hello@happyplaneta.com">Support</a>
     </nav>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <h1>Make Better Buying Decisions.</h1>
-        <p>Expert, unbiased reviews on sustainable products to help you live a greener life without the guesswork.</p>
-        <a href="https://plans.happyplaneta.com" class="btn-sm" style="padding: 15px 30px;">Get Started with Plans</a>
-    </div>
+    <h1>Honest Reviews for a Better World.</h1>
+    <p>We test the products so you don't have to. Real-world testing on the latest sustainable home, kitchen, and lifestyle goods.</p>
+    <a href="#reviews" class="btn-cta" style="display:inline-block; padding: 15px 40px; border-radius: 50px;">Browse Latest Reviews</a>
 </section>
 
-<main class="container">
-    <h2 class="section-title" id="reviews">Latest Product Reviews</h2>
-    
-    <div class="grid">
+<div class="main-container">
+    <div class="grid" id="reviews">
+        
         <div class="review-card">
             <div class="card-content">
-                <span class="category">Home & Garden</span>
-                <h3>Solar Powered Outdoor Lighting</h3>
-                <div class="rating">★★★★★ 4.9/5</div>
-                <p>We tested 15 different solar lamps. Here are the ones that actually stay bright all night.</p>
-                <a href="#" class="btn-sm">Read Review</a>
+                <span class="tag">Kitchen Tech</span>
+                <h3>Solar Ovens: 2026 Comparison</h3>
+                <div class="stars">★★★★★ <span style="color:#666; font-size:0.9rem;">(Top Pick)</span></div>
+                <p>Can you really cook a meal using only the sun? We tested the 3 leading models for 30 days.</p>
+                <a href="#" class="btn-cta">Read Full Review</a>
             </div>
         </div>
 
         <div class="review-card">
             <div class="card-content">
-                <span class="category">Lifestyle</span>
-                <h3>Top 5 Biodegradable Yoga Mats</h3>
-                <div class="rating">★★★★☆ 4.5/5</div>
-                <p>Sustainability meets grip. We reviewed the top mats that won't end up in a landfill.</p>
-                <a href="#" class="btn-sm">Read Review</a>
+                <span class="tag">Home</span>
+                <h3>Eco-Friendly Cleaning Kits</h3>
+                <div class="stars">★★★★☆ <span style="color:#666; font-size:0.9rem;">(Best Value)</span></div>
+                <p>Tired of plastic waste? These refillable cleaning tablets are changing the game. Are they effective?</p>
+                <a href="#" class="btn-cta">Read Full Review</a>
             </div>
         </div>
 
         <div class="review-card">
             <div class="card-content">
-                <span class="category">Kitchen</span>
-                <h3>Zero-Waste Storage Sets</h3>
-                <div class="rating">★★★★★ 4.8/5</div>
-                <p>Are glass or silicone sets better for your kitchen? We settle the debate once and for all.</p>
-                <a href="#" class="btn-sm">Read Review</a>
+                <span class="tag">Lifestyle</span>
+                <h3>Bamboo vs Hemp Clothing</h3>
+                <div class="stars">★★★★★ <span style="color:#666; font-size:0.9rem;">(Editors Choice)</span></div>
+                <p>Which fabric lasts longer and feels better? Our deep dive into sustainable fashion brands.</p>
+                <a href="#" class="btn-cta">Read Full Review</a>
             </div>
         </div>
+
     </div>
-</main>
+</div>
 
 <footer>
-    <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="https://plans.happyplaneta.com">Pricing Plans</a>
-        <a href="mailto:hello@happyplaneta.com">Support</a>
+    <div style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
+        <p>&copy; 2026 Happy Planeta | Expert Sustainability Reviews</p>
+        <p><a href="https://plans.happyplaneta.com" style="color: var(--accent);">View Subscription Plans</a></p>
     </div>
-    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 30px 0;">
-    <p>&copy; 2026 Happy Planeta Review Labs. All rights reserved.</p>
 </footer>
 
 </body>
