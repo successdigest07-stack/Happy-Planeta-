@@ -3,74 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Planeta | Wellness & Growth</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Happy Planeta | Sustainable Living</title>
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-green: #76ba99;
+            --dark-earth: #3e4e50;
+            --light-bg: #f9fbf9;
+            --white: #ffffff;
+            --accent-gold: #ffcc00;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-earth);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-earth);
+            margin-left: 20px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, #e8f5e9 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-earth);
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+
+        .btn {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(118, 186, 153, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(118, 186, 153, 0.5);
+            background-color: #64a686;
+        }
+
+        /* FEATURES SECTION */
+        .main-content {
+            padding: 80px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #f1f3f1;
+            text-align: center;
+            padding: 60px 5%;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+            color: var(--dark-earth);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { flex-direction: column; gap: 15px; }
+            nav { margin-bottom: 10px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
 </head>
-<body class="bg-white text-slate-900 font-sans">
+<body>
 
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-black tracking-tighter text-blue-600">HAPPY PLANETA</div>
-        <div class="hidden md:flex gap-8 font-medium text-sm uppercase tracking-widest text-slate-600">
-            <a href="#about" class="hover:text-blue-600 transition">About</a>
-            <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-        </div>
-    </nav>
-
-    <header class="px-8 py-20 text-center max-w-4xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-black leading-none tracking-tight mb-6 text-slate-900">
-            Live better. <br><span class="text-blue-600">Grow faster.</span>
-        </h1>
-        <p class="text-xl text-slate-500 mb-10 leading-relaxed">
-            Curating the best in wellness and intentional living for the modern world.
-        </p>
-        <a href="#about" class="bg-slate-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-600 transition shadow-xl inline-block">
-            Explore Our Story
+    <header>
+        <a href="/" class="logo-container">
+            <img src="favicon.png" alt="Happy Planeta Logo">
+            <span>Happy Planeta</span>
         </a>
+        <nav>
+            <a href="#about">Our Mission</a>
+            <a href="https://plans.happyplaneta.com">View Plans</a>
+            <a href="mailto:hello@happyplaneta.com">Support</a>
+        </nav>
     </header>
 
-    <section id="about" class="py-24 bg-slate-50 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black tracking-tight mb-4 text-slate-900">The Happy Planeta Story</h2>
-                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
-                    <p>
-                        <strong class="text-slate-900 font-bold">Happy Planeta</strong> started with a simple question: How do we maintain our well-being in a world that never stops moving?
-                    </p>
-                    <p>
-                        We realized that true growth isn't about doing more—it's about doing what matters. We bring you a filtered, science-backed guide to living better and reaching your full potential.
-                    </p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                    <h4 class="text-xl font-bold mb-6 text-slate-900">Our Core Beliefs</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-4">
-                            <i class="fas fa-check-circle text-blue-500 text-xl"></i> 
-                            <span class="font-medium">Radical Clarity</span>
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <i class="fas fa-check-circle text-green-500 text-xl"></i> 
-                            <span class="font-medium">Holistic Growth</span>
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <i class="fas fa-check-circle text-purple-500 text-xl"></i> 
-                            <span class="font-medium">Conscious Living</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <section class="hero">
+        <h1>Small Steps, <br><span style="color: var(--primary-green);">Happy Planet.</span></h1>
+        <p>Make a real impact on the world with sustainable lifestyle choices that fit your daily routine.</p>
+        <a href="https://plans.happyplaneta.com" class="btn">Explore Our Plans</a>
     </section>
 
-    <footer id="contact" class="py-20 border-t border-slate-100 text-center">
-        <div class="text-2xl font-black tracking-tighter text-slate-300 mb-8">HAPPY PLANETA</div>
-        <p class="text-slate-400 text-sm">© 2026 Happy Planeta. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <div class="main-content" id
